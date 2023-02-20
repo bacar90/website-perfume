@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-cyan: #3c8067;
+    --cream: #f2ebe3;
+    --very-dark-blue: #1c232b;
+    --dark-grayish-blue: #6c7289;
+    --white: #ffffff;
+}
+
+body{
+    background-color: var(--cream);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.img-mobile{
+    display: none;
+}
+
+.container{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-desktop{
+    width: 350px;
+    height: 500px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.description-perfume{
+    background-color: var(--white);
+    width: 350px;
+    height: 500px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.description-perfume h3, h1, p, .price, button{
+    margin: 8%;
+}
+
+.description-perfume h1{
+    font-family: 'Fraunces';
+    
+}
+
+.description-perfume h3, p{
+    color: var(--dark-grayish-blue);
+}
+
+.description-perfume  p{
+    line-height: 1.9;
+}
+
+.price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.price .price1{
+    font-size: 30px;
+    font-family: 'Fraunces';
+    color: var(--dark-cyan);
+}
+.price .price2{
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+
+button{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--dark-cyan);
+    padding: 10px 25%;
+    cursor: pointer;
+}
+
+
+button a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 15px;
+}
+
+button a, .bi-cart{
+    padding: 0 5px;
+}
+
+/* -------------------media query----------------------- */
+
+@media only screen and (max-width: 765px){
+    .img-desktop{
+        display: none;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-mobile{
+        display: block;
+        width: 360px;
+        height: 280px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .description-perfume{
+        width: 360px;
+        height: 480px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
